@@ -14,7 +14,9 @@ export default function CountsBySurveyCategory(props) {
     totals,
     changeTotals,
     location,
-    year
+    year,
+    baselineYear,
+    baselineTotals
   } = props;
   const surveyCategories = [];
   const causesOfChange = [];
@@ -137,6 +139,17 @@ export default function CountsBySurveyCategory(props) {
               <td></td>
               <td></td>
             </tr>
+            {baselineYear && baselineTotals &&
+              <tr className="subgeography-totals__totals" key="totals-baseline">
+                <td className="subgeography-totals__subgeography-name">Totals {baselineYear}</td>
+                <td>{formatNumber(baselineTotals.ESTIMATE)}</td>
+                <td>{formatNumber(baselineTotals.CONFIDENCE) || '-'}</td>
+                <td>{formatNumber(baselineTotals.GUESS_MIN)}</td>
+                <td>{formatNumber(baselineTotals.GUESS_MAX)}</td>
+                <td></td>
+                <td></td>
+              </tr>
+            }
             <tr>
               <td colSpan="4"></td>
               <td>Assessed Range</td>
@@ -226,5 +239,7 @@ CountsBySurveyCategory.propTypes = {
   totals: PropTypes.object.isRequired,
   changeTotals: PropTypes.object,
   year: PropTypes.string.isRequired,
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
+  baselineYear: PropTypes.number,
+  baselineTotals: PropTypes.object
 };

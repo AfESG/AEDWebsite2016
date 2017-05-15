@@ -20,7 +20,6 @@ export default function ADDSidebar(props) {
   } = props;
   const subGeography = getNextGeography(currentGeography);
   const data = type => geographies[`${type}_sums`][0];
-
   // TODO The API does not include strata summaries
   let addSummaryData;
   let addChangeData;
@@ -76,6 +75,8 @@ export default function ADDSidebar(props) {
             changeTotals={addChangeData}
             year={year}
             location={location}
+            baselineYear={access(geographies, 'baseline_year')}
+            baselineTotals={access(geographies, 'summary_baseline[0]')}
           />
         </div>
       }
