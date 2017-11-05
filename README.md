@@ -8,7 +8,7 @@ The narratives for each geographical area are kept in a separate repo and includ
 
 When making a change to the AEDNarratives repo, pull the latest by running:
 
-* `git submodule update --recursive`
+* `git submodule update --recursive --remote`
 
 ## Develop
 * `npm install`
@@ -25,3 +25,7 @@ When making a change to the AEDNarratives repo, pull the latest by running:
 ## Build and Demo Production server
 
 `npm run production`
+
+## Deploy
+
+... in progress ...
