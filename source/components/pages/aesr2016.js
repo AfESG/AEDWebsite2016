@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { withRouter } from 'react-router';
 import Introduction from 'html!markdown!./../../data/aesr-2016/introduction.md';
 import ExecutiveSummary from 'html!markdown!./../../data/aesr-2016/executive-summary.md';
+import AcronymsAbbreviations from 'html!markdown!./../../data/aesr-2016/abbreviations.md';
 import Errata2016 from 'html!markdown!./../../data/aesr-2016/errata-2016.md';
 
 class aesr2016 extends Component {
@@ -68,6 +69,11 @@ class aesr2016 extends Component {
                     Executive Summary
                   </a>
                 </li>
+                <li className={this.setMenuItemClass('#abbreviations')}>
+                  <a href="#abbreviations">
+                    Acronyms and Abbreviations
+                  </a>
+                </li>
                 <li className={this.setMenuItemClass('#errata-2016')}>
                   <a href="#errata-2016">
                     Errata 2016
@@ -82,6 +88,9 @@ class aesr2016 extends Component {
             </div>
             <div className="about-content__section" id="executive-summary">
               <div dangerouslySetInnerHTML={ { __html: ExecutiveSummary } } />
+            </div>
+            <div className="about-content__section" id="abbreviations">
+              <div dangerouslySetInnerHTML={ { __html: AcronymsAbbreviations } } />
             </div>
             <div className="about-content__section" id="errata-2016">
               <div dangerouslySetInnerHTML={ { __html: Errata2016 } } />
