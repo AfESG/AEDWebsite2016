@@ -12,9 +12,9 @@
 **AVIGREF** -	Associations villageoises pour la gestion des réserves de faune (Benin)	
 
 ### B									
-BGP	Big Game Parks of Swaziland						
-BR	Biosphere Reserve							
-BtR	Botanical Reserve							
+**BGP** -	Big Game Parks of Swaziland						
+**BR** -	Biosphere Reserve							
+**BtR** -	Botanical Reserve							
 
 ### C									
 **CA** -	Conservation Area							
