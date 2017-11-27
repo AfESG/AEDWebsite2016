@@ -30,15 +30,32 @@ Frontend scaffold: Webpack, Babel, Stylus (autoprefixer), React, Redux, ESLint
 ## Deploy
 
 ### Staging
+
+#### Heroku Setup
+
 Currently this site is staged in the `elephantdatabase` project on Heroku. 
 
 The URL for the current staging deployment is [http://elephantdatabase.herokuapp.com](http://elephantdatabase.herokuapp.com).
+
+If you haven't already done so, in order to push to Heroku you will need to install the Heroku CLI and login using that tool. Follow the instructions on how to install the Heroku CLI for your system here: [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+
+Once installed, you need to login with your Heroku credentials by running the following command and follow the prompts:
+
+* `heroku login`
 
 In order to push changes to this staging environment you will first need to be given access as a team member to the `africanelephantdatabase` team on Heroku. Next you will need to add the `elephantdatabase` Heroku remote to this repo (which you should have already cloned on your local dev machine), but entering the following command: 
 
 * `heroku git:remote -a elephantdatabase`
 
-When you want to push changes to the staging environment on Heroku you just need push this repo to the Heroku git remote (`git push heroku master`). Heroku should then automatically compile the project and run `npm start` which will start the Node server and serve the application.
+Once this is done, you should be able to now push changes to Heroku.
+
+#### How to deploy changes to Heroku:
+
+When you want to push changes to the staging environment on Heroku you just need push this repo to the Heroku git remote, just like you would if pushing changes here to github only you point to the 'remote' repo on Heroku we set up above:
+
+* `git push heroku master`
+
+The changes will be pushed to Heroku and then will automatically compile the project and run `npm start` which will start the Node server and serve the application at [http://elephantdatabase.herokuapp.com](http://elephantdatabase.herokuapp.com).
 
 ### Production
 There is currently no production environment deployed. In order to deploy to a production environment you must first set the NODE_ENV environment variable on the production environment you intend to deploy to. Set it to the following `NODE_ENV=production`.
