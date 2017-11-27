@@ -9,6 +9,10 @@ When making a change to the AEDNarratives repo, pull the latest by running:
 
 * `git submodule update --recursive --remote`
 
+Then push these changes to github:
+
+* `git push origin master`
+
 ## Develop
 Frontend scaffold: Webpack, Babel, Stylus (autoprefixer), React, Redux, ESLint
 
