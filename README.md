@@ -74,7 +74,7 @@ Currently this site is staged in the `elephantdatabase` project on Heroku.
 
 The URL for the current staging deployment is [http://elephantdatabase.herokuapp.com](http://elephantdatabase.herokuapp.com).
 
-If you haven't already done so, in order to push to Heroku you will need to install the Heroku CLI and login using that tool. Follow the instructions on how to install the Heroku CLI for your system here: [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+If you haven't already done so, in order to push to Heroku you will need to install the Heroku CLI and login using that tool. Follow the instructions on how to install the Heroku CLI for your system here: [Install Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli). For Mac, use this [installer](https://devcenter.heroku.com/articles/heroku-cli#macos-installer).
 
 Once installed, you need to login with your Heroku credentials by running the following command and follow the prompts:
 
