@@ -1,11 +1,44 @@
 # AEDWebsite2016
 
+## TLDR; on Basic Setup and Deployment
+For further details, see below.
+
+Clone the repo to your machine:
+
+* `git clone https://github.com/AfESG/AEDWebsite2016.git`
+
+Go into the repo:
+
+* `cd AEDWebsite2016`
+
+Pull in the AEDNarratives Repo:
+
+* `git submodule update --init --recursive`
+
+Install the dependencies:
+
+* `npm install`
+
+Run the Development server:
+
+* `npm run start`
+
+After making changes, add the changes, commit and push to Github:
+
+* `git add --all .`
+* `git commit -m 'Your commit messsage'`
+* `git push origin master`
+
+Now, assuming you have setup Heroku on your machine and added the 'remote' to this repo on your local machine (see below), push your changes to the Staging server on Heroku:
+
+* `git push heroku master`
+
 ## Important note aboue AEDNarratives repo
 The narratives for each geographical area (content found in the 'overview' section of the sidebars) are kept in a separate repo and included in this repo as a submodule. To ensure that the narratives are included in this development environment, after cloning this repo, run the following command to pull latest from the [AEDNarratives](https://github.com/AfESG/AEDNarratives) repo:
 
 * `git submodule update --init --recursive`
 
-When making a change to the AEDNarratives repo, pull the latest by running:
+If you want to make changes to this content, DO NOT do it here in AEDWebsite2016, do it in [AEDNarratives](https://github.com/AfESG/AEDNarratives) and run the following command in this repo to update the content:
 
 * `git submodule update --recursive --remote`
 
